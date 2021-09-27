@@ -1,0 +1,12 @@
+fun main(args:Array<String>){
+    var str1: String = "Anshita "
+    var str2: String = "Sharma "
+    var str3: String = "Have a nice day "
+    
+    println(str3.add(str1,str2))
+    
+    
+}//Extension Function
+    fun String.add(str1: String, str2: String):String{
+        return this+str1+str2
+    }
