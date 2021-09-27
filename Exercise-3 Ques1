@@ -1,0 +1,53 @@
+object Singleton{
+    
+    init {
+        println("Singleton class invoked.")
+    }
+    var variableName = "I am Var"
+    fun printVarName(){
+        println("Hello Anshita")
+    }
+
+}
+
+fun main(args: Array<String>) {     
+    Singleton.printVarName()
+    Singleton.variableName = "Apple "       
+    var a = A()
+    
+    Singleton.variableName = "Mango"
+    var b = B()
+    
+    Singleton.variableName = "Grapes"
+    var c = C()
+}
+
+class A {
+
+    init {
+        println("Class A: ${Singleton.variableName}")
+        Singleton.printVarName()
+      	println("\n")
+    }
+}
+
+class B {
+
+    init {
+        println("Class B: ${Singleton.variableName}")
+        Singleton.printVarName()
+   
+        println("\n")
+      
+    }
+}
+
+class C {
+
+    init {
+        println("Class C: ${Singleton.variableName}")
+        Singleton.printVarName()
+
+      	println("\n")
+    }
+}
