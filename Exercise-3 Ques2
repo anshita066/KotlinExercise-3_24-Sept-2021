@@ -1,34 +1,30 @@
 sealed class Vehicle{
+    fun getClass(base: Vehicle){
+    	println("This is called from object of ${base.javaClass}")}
+}
+
+class Car: Vehicle(){
     
-    var vehicletype = "Any"
-   
-    open fun type(vehicletype){
-        println(vehicletype)
-    }
 }
 
-class Car:Vehicle{
-     fun type(vehicletype){
-        println("car")
-    }
-}
-
-class Scooter:Vehicle{
-      fun type(vehicletype){
-        println("scooter")
-    }
-}
-
-class Bicycle:Vehicle{
-      fun type(vehicletype){
-        println("bicycle")
-    }
-}
-
-fun main(args:Array<String){
-    println("I am in Main function")
+class Scooter: Vehicle(){
     
-    val c = Car()
-    val s = Scooter()
-    val b = Bicycle()
+}
+
+class Bicycle: Vehicle(){
+    
+}
+
+fun main(args: Array<String>){
+    var vehicle = Vehicle()
+    var car = Car()
+    var scooter = Scooter()
+    var bicycle = Bicycle()
+    
+    car.getClass(car);
+    scooter.getClass(scooter);
+    bicycle.getClass(bicycle);
+    
+    
+    
 }
